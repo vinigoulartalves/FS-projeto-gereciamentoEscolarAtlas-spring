@@ -1,6 +1,5 @@
 package br.com.atlas.gereciamento.model;
 
-
 import lombok.Getter;
 import lombok.Setter;
 
