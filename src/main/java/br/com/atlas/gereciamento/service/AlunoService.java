@@ -2,6 +2,7 @@ package br.com.atlas.gereciamento.service;
 
 
 import br.com.atlas.gereciamento.model.Aluno;
+import br.com.atlas.gereciamento.model.Curso;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -32,5 +33,9 @@ public class AlunoService {
     //Mostra os todos os alunos
     public List<Aluno> buscarTodos() {
         return Aluno.getAlunosMatriculados();
+    }
+
+    public Aluno buscarId(Integer id) throws Exception {
+        return Aluno.buscarPorId(id);
     }
 }

@@ -1,6 +1,6 @@
 package br.com.atlas.gereciamento.controller;
 
-
+import br.com.atlas.gereciamento.model.Aluno;
 import br.com.atlas.gereciamento.model.Curso;
 import br.com.atlas.gereciamento.service.CursoService;
 import org.springframework.web.bind.annotation.*;
@@ -28,4 +28,11 @@ public class CursoController {
     public List<Curso> get() {
         return cursoService.buscarTodos();
     }
+
+    //Cadastro de aluno na turma
+    @PostMapping("{id}/add-aluno")
+    public Curso postAluno(@PathVariable Integer id, @RequestBody Aluno aluno) throws Exception {
+        return cursoService.adicionarAluno(id, aluno.getId());
+    }
+
 }

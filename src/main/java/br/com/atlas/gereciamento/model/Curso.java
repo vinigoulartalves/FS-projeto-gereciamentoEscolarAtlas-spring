@@ -21,9 +21,26 @@ public class Curso {
     @Setter
     private Integer cargaHoraria;
 
+    private List<Aluno> alunos = new ArrayList<>();
+
     public static Curso inserir(Curso curso) {
         curso.id = proximoId++;
         cursosCadastrados.add(curso);
         return curso;
     }
+
+    public static Curso buscarPorId(Integer id) throws Exception {
+        for (Curso curso : cursosCadastrados) {
+            if (curso.getId().equals(id)) {
+                return curso;
+            }
+        }
+        throw new Exception("Curso não encontrado.");
+    }
+
+    public static void adicionarAluno(Curso curso, Aluno aluno) {
+        curso.getAlunos().add(aluno);
+    }
+
+
 }
