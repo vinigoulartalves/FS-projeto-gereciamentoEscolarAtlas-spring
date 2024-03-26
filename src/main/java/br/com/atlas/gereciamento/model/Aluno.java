@@ -9,6 +9,7 @@ import java.util.List;
 @Getter
 public class Aluno {
 
+    @Getter
     private static List<Aluno> alunosMatriculados = new ArrayList<>();
 
     private static Integer proximoId = 1;
