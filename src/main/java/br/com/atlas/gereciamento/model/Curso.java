@@ -9,6 +9,7 @@ import java.util.List;
 @Getter
 public class Curso {
 
+    @Getter
     private static List<Curso> cursosCadastrados = new ArrayList<>();
 
     private static Integer proximoId = 1;
